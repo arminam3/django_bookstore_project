@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Hello</h1>
+{% if user.is_authenticated %}
+    <p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+    <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a></p>
+{% endif %}
+</body>
+</html>
