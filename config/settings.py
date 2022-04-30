@@ -43,7 +43,8 @@ INSTALLED_APPS = [
 
     # local apps
     'accounts',
-    'pages'
+    'pages',
+    'books',
 
 ]
 
