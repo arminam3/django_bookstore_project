@@ -1,4 +1,7 @@
 {% extends '_base.html' %}
+{% load book_tags %}
+
+
 
 {% block title %}
     لیست کتاب ها
@@ -7,7 +10,7 @@
 {% block content %}
     {% for book in books %}
         <a href="{{ book.get_absolute_url }}" style="text-decoration: None">
-            <h1>{{ book.title|capfirst }}</h1>
+            <h1>{{ book.title|capfirst|my_lower:2 }}</h1>
         </a>
         <p>{{ book.description|truncatewords:2 }}</p>
         <br>
