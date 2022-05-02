@@ -12,5 +12,6 @@
         <p>{{ book.description }}</p>
         <br>
     {% endfor %}
+    <a href="{% url 'book_create' %}" class="btn btn-success">ثبت کتاب</a>
 
 {% endblock content %}
