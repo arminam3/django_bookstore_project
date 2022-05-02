@@ -7,9 +7,9 @@
 {% block content %}
     {% for book in books %}
         <a href="{{ book.get_absolute_url }}" style="text-decoration: None">
-            <h1>{{ book.title }}</h1>
+            <h1>{{ book.title|capfirst }}</h1>
         </a>
-        <p>{{ book.description }}</p>
+        <p>{{ book.description|truncatewords:2 }}</p>
         <br>
     {% endfor %}
     <a href="{% url 'book_create' %}" class="btn btn-success">ثبت کتاب</a>
