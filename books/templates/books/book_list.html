@@ -1,9 +1,16 @@
 {% extends '_base.html' %}
 
 {% block title %}
-لیست کتاب ها
+    لیست کتاب ها
 {% endblock title %}
 
 {% block content %}
- {{ books }}
+    {% for book in books %}
+        <a href="{{ book.get_absolute_url }}" style="text-decoration: None">
+            <h1>{{ book.title }}</h1>
+        </a>
+        <p>{{ book.description }}</p>
+        <br>
+    {% endfor %}
+
 {% endblock content %}
