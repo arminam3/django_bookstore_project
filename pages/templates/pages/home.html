@@ -6,12 +6,6 @@
 </head>
 <body>
 <h1>Hello</h1>
-{% if user.is_authenticated %}
-    <p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Log Out</a></p>
-    <a href="{% url 'password_change' %}" class="btn btn-warning">password change</a>
-{% else %}
-    <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a></p>
-{% endif %}
 <a href="{% url 'book_list' %}">لیست کتاب ها</a>
 </body>
 </html>
